@@ -162,6 +162,18 @@ namespace WindowsFormsApp1
             defaultFileName = textBox6.Text;
         }
 
-        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+            folderBrowserDialog1.RootFolder = Environment.SpecialFolder.MyComputer;
+
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var path1 = new StringBuilder(folderBrowserDialog1.SelectedPath);
+                var path2 = $"{path1.Replace('\\', '/')}/";
+                textBox4.Text = path2.ToString();
+                folderPath = textBox4.Text;
+            }
+        }
     }
 }

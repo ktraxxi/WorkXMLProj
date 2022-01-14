@@ -43,7 +43,6 @@ namespace WindowsFormsApp1
 
         }
 
-        //private string _paySystem;
         [XmlElement]        public string PaySystem { get; set; }        
         [XmlElement]        public string PayMethod { get; set; }
         [XmlElement]        public string PayMethodInfo { get; set; }
